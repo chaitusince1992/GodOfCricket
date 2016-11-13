@@ -9,18 +9,6 @@ godOfCricketApp.config(['$routeProvider', function ($routeProvider) {
         /*.when('/questions/:questionNo', {
             templateUrl: 'view/questions.template.html',
             controller: 'questionsController'
-        })
-        .when('/result', {
-            templateUrl: 'view/result.template.html',
-            controller: 'resultController'
-        })
-        .when('/answers/:questionNo', {
-            templateUrl: 'view/answers.template.html',
-            controller: 'answersController'
-        })
-        .when('/thankyou', {
-            templateUrl: 'view/thankyou.template.html',
-            controller: 'thankyouController'
         })*/
         .otherwise("/home", {
             url: '/home'

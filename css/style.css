@@ -16,7 +16,7 @@ body* {
 }
 .application-header {
     color: white;
-    background: #3496bd;
+    background: #615f60;
     font-size: 1.5em;
     text-align: center;
     padding: 20px 20px;
@@ -33,6 +33,8 @@ img.backbutton-icon {
     display: inline-block;
     vertical-align: top;
     padding: 0 20px;
+    font-family: monospace;
+    font-size: 1.3em;
 }
 .application-detail {
     position: absolute;
@@ -47,7 +49,8 @@ img.backbutton-icon {
     width: 100%;
     height: 100%;
     position: relative;
-    background: url(../img/handing-1080p-wallpaper_3_1680x1050.jpg);
+    background-color: #dedede;
+    background-image: url(../img/handing-1080p-wallpaper_3_1680x1050.jpg);
     background-size: 100%;
 }
 .sachin-image img {
