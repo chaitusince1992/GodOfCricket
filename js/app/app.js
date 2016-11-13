@@ -1,16 +1,12 @@
 var godOfCricketApp = angular.module('godOfCricket', ['ngRoute','ngAnimate']);
 
-/*godOfCricketApp.config(['$routeProvider', function ($routeProvider) {
+godOfCricketApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-        .when('/enterName', {
-            templateUrl: 'view/enterName.template.html',
-            controller: 'enterNameController'
+        .when('/home', {
+            templateUrl: 'view/home.template.html',
+            controller: 'homeController'
         })
-        .when('/', {
-            templateUrl: 'view/enterName.template.html',
-            controller: 'enterNameController'
-        })
-        .when('/questions/:questionNo', {
+        /*.when('/questions/:questionNo', {
             templateUrl: 'view/questions.template.html',
             controller: 'questionsController'
         })
@@ -25,8 +21,8 @@ var godOfCricketApp = angular.module('godOfCricket', ['ngRoute','ngAnimate']);
         .when('/thankyou', {
             templateUrl: 'view/thankyou.template.html',
             controller: 'thankyouController'
+        })*/
+        .otherwise("/home", {
+            url: '/home'
         })
-        .otherwise("/", {
-            url: '/enterName'
-        })
-}]);*/
+}]);
