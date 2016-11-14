@@ -50,11 +50,10 @@ img.backbutton-icon {
     height: 100%;
     /*    position: relative;*/
     background-color: #dedede;
-    background-image: url(../img/handing-1080p-wallpaper_3_1680x1050.jpg);
     background-size: 100%;
 }
 .sachin-image img {
-    width: 100%;
+    width: 450px;
 }
 .welcome-text-app {
     font-size: 1.3em;
