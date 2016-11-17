@@ -6,10 +6,10 @@ godOfCricketApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'view/home.template.html',
             controller: 'homeController'
         })
-        /*.when('/questions/:questionNo', {
-            templateUrl: 'view/questions.template.html',
-            controller: 'questionsController'
-        })*/
+        .when('/charts/:chartName', {
+            templateUrl: 'view/charts.template.html',
+            controller: 'chartsController'
+        })
         .otherwise("/home", {
             url: '/home'
         })
