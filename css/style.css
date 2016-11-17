@@ -44,6 +44,7 @@ img.backbutton-icon {
     bottom: 0;
     background: #c8c8c8;
     text-align: center;
+    overflow: auto;
 }
 .sachin-image {
     width: 100%;

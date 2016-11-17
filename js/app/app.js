@@ -1,4 +1,4 @@
-var godOfCricketApp = angular.module('godOfCricket', ['ngRoute','ngAnimate']);
+var godOfCricketApp = angular.module('godOfCricket', ['ngRoute','ngAnimate','highcharts-ng']);
 
 godOfCricketApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
