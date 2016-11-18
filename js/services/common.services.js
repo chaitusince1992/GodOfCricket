@@ -108,7 +108,9 @@ godOfCricketApp.service('commonServices', ['$q', '$http', function ($q, $http) {
                 headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
                 pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y} of total<br/>'
             },
-
+            credits: {
+                enabled: false
+            },
             series: seriesData,
             drilldown: drillDownData
         });

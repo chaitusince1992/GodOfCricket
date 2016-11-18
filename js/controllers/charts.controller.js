@@ -41,28 +41,11 @@ godOfCricketApp.controller('chartsController', ['$scope', '$rootScope', '$locati
                 }
             }
             console.log(scoreChartArray);
-
-
-
-
             var seriesData = [{
                 name: 'Countries',
                 colorByPoint: true,
                 data: scoreChartArray
             }];
-
-            /*var seriesData = [{
-                name: 'Brands',
-                colorByPoint: true,
-                data: [{
-                    name: 'Microsoft Internet Explorer',
-                    y: 56.33,
-                    drilldown: 'Microsoft Internet Explorer'
-                }, {
-                    name: 'Chrome',
-                    y: 24.03
-                }]
-            }];*/
             var drillDownData = {
                 series: [{
                     name: 'Microsoft Internet Explorer',
@@ -95,7 +78,7 @@ godOfCricketApp.controller('chartsController', ['$scope', '$rootScope', '$locati
                     ]
                 }]
             };
-            commonServices.createChart($("#container"), 'Test Title', 'Test sub', seriesData, drillDownData);
+            commonServices.createChart($("#container"), 'Score Against Each country', '', seriesData, drillDownData);
         };
 
         $scope.chartConfig2 = {
