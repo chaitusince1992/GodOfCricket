@@ -1,6 +1,6 @@
-godOfCricketApp.service('commonServices', ['$q', '$http', function($q, $http) {
+godOfCricketApp.service('commonServices', ['$q', '$http', function ($q, $http) {
     self = this;
-    self.getSachinDataFromCSV = function(callbackSuccess) {
+    self.getSachinDataFromCSV = function (callbackSuccess) {
         $http({
             url: 'sachin.csv',
             method: 'GET',
@@ -24,10 +24,10 @@ godOfCricketApp.service('commonServices', ['$q', '$http', function($q, $http) {
             callbackSuccess(parsedEachRow);
         });
     };
-    self.getSachinDataFromCSV(function(res) {
+    self.getSachinDataFromCSV(function (res) {
         //        console.log(res);
     });
-    self.cleanData = function(sachinDataIn) {
+    self.cleanData = function (sachinDataIn) {
         var sachinData = JSON.parse(JSON.stringify(sachinDataIn));
         var totalScore = 0;
         var countOfOuts = 0;
@@ -72,8 +72,8 @@ godOfCricketApp.service('commonServices', ['$q', '$http', function($q, $http) {
         }
     };
 
-    self.createChart = function(element,title,subtitle,seriesData,drillDownData) {
-        $(element).highcharts({
+    self.createChart = function (element, title, subtitle, seriesData, drillDownData) {
+        var chart = $(element).highcharts({
             chart: {
                 type: 'column'
             },

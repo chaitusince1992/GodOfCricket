@@ -95,10 +95,7 @@ godOfCricketApp.controller('chartsController', ['$scope', '$rootScope', '$locati
                     ]
                 }]
             };
-            var height = $('div#container').height();
-            console.log(height);
-            $('div#container').css("height",height);
-//            commonServices.createChart($("#container"), 'Test Title', 'Test sub', seriesData, drillDownData);
+            commonServices.createChart($("#container"), 'Test Title', 'Test sub', seriesData, drillDownData);
         };
 
         $scope.chartConfig2 = {
