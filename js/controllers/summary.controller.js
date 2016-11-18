@@ -17,6 +17,7 @@ godOfCricketApp.controller('summaryController', ['$scope', '$rootScope', '$locat
         };
         $scope.clickedOnTotalScores = function() {
             console.log("clicked on total scores");
+            $location.path("/charts/line");
         };
     }
 ]);

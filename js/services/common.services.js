@@ -1,6 +1,6 @@
-godOfCricketApp.service('commonServices', ['$q', '$http', function ($q, $http) {
+godOfCricketApp.service('commonServices', ['$q', '$http', function($q, $http) {
     self = this;
-    self.getSachinDataFromCSV = function (callbackSuccess) {
+    self.getSachinDataFromCSV = function(callbackSuccess) {
         $http({
             url: 'sachin.csv',
             method: 'GET',
@@ -20,14 +20,14 @@ godOfCricketApp.service('commonServices', ['$q', '$http', function ($q, $http) {
                 parsedEachRow.push(parsedEachRowObject);
             }
             console.log("csv parsed successfully");
-//            self.cleanData(parsedEachRow);
+            //            self.cleanData(parsedEachRow);
             callbackSuccess(parsedEachRow);
         });
     };
-    self.getSachinDataFromCSV(function (res) {
+    self.getSachinDataFromCSV(function(res) {
         //        console.log(res);
     });
-    self.cleanData = function (sachinDataIn) {
+    self.cleanData = function(sachinDataIn) {
         var sachinData = JSON.parse(JSON.stringify(sachinDataIn));
         var totalScore = 0;
         var countOfOuts = 0;
@@ -71,4 +71,46 @@ godOfCricketApp.service('commonServices', ['$q', '$http', function ($q, $http) {
             centuries: centuries
         }
     };
+
+    self.createChart = function(element,title,subtitle,seriesData,drillDownData) {
+        $(element).highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: title
+            },
+            subtitle: {
+                text: subtitle
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: seriesData[0].name
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y}'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y} of total<br/>'
+            },
+
+            series: seriesData,
+            drilldown: drillDownData
+        });
+    }
 }]);
