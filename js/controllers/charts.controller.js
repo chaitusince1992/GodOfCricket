@@ -15,16 +15,16 @@ godOfCricketApp.controller('chartsController', ['$scope', '$rootScope', '$locati
                 $("#go-to-next-chart").show();
                 if($routeParams.chartName == 'score') {
                     $scope.scoringChart(resultOverView);
-                    $scope.pageName = 'Runs against each country';
+                    $scope.pageName = 'Runs';
                 } else if($routeParams.chartName == 'average') {
                     $scope.averageChart(resultOverView);
-                    $scope.pageName = 'Average against each country';
+                    $scope.pageName = 'Batting Average';
                 } else if($routeParams.chartName == 'centuries') {
                     $scope.centuriesChart(resultOverView);
-                    $scope.pageName = 'Centuries against each country';
+                    $scope.pageName = 'Centuries';
                 } else if($routeParams.chartName == 'halfcenturies') {
                     $scope.halfCenturiesChart(resultOverView);
-                    $scope.pageName = 'Half Centuries against each country';
+                    $scope.pageName = 'Half Centuries';
                     $("#go-to-next-chart").hide();
                 }
             });
